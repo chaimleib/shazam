@@ -1,4 +1,4 @@
-deps: hexbyte.py lightblue-install
+deps: hexbyte.py lightblue-install pyobjc
 
 hexbyte.py:
 	curl -sL https://raw.githubusercontent.com/borismus/Running-Gestures/master/hexbyte.py > hexbyte.py
@@ -10,6 +10,9 @@ lightblue:
 
 lightblue-install: lightblue
 	cd lightblue-0.4 && sudo python setup.py install
+
+pyobjc:
+	pip install pyobjc
 
 clean:
 	rm -f hexbyte.py
